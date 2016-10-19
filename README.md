@@ -1,7 +1,7 @@
 LISEQ-codes
 ========
 
-You can find the latest version of the tool at https://github.com/lguillier/
+You can find the latest version of the tool at https://github.com/lguillier/LISEQ-codes
 
 The 'LISEQ-codes' project corresponds to a repository of the differents codes used to produce the results presented in the EFSA external report “Closing gaps for performing a risk assessment on Listeria monocytogenes in ready-to-eat (RTE) foods: activity 3, the comparison of isolates from different compartments along the food chain, and from humans using whole genome sequencing (WGS) analysis”. 
 
@@ -16,6 +16,33 @@ Chapter 3
 
 Chapter 4
 ========
+The four trees generated in this chapter were generated with RAXML.
+A. Stamatakis: "RAxML Version 8: A tool for Phylogenetic Analysis and Post-Analysis of Large Phylogenies". In Bioinformatics, 2014
+
+The SNP multifasta files used are available there: https://github.com/lguillier/LISEQ-code/chapter4
+The following command lines were used to produce
+~~~~
+## CC101
+raxml -T 7 -A S16 -m GTRGAMMA -s 2016-06-08.listeria_cc101_denovo_snps.CC101-list.txt.fa -n CC101_100BS-GAMMA -f a -x 12345 -N 100 -p 12345  -k
+cp RAxML_bestTree.CC101_100BS-GAMMA RAxML_bestTree.CC101_100BS-GAMMA.nwk
+
+## CC121
+raxml -T 6 -A S16 -m GTRGAMMA -s 2016-06-08.listeria_cc121_snps.CC121-list.txt.fa -n CC121_1000BS-GAMMA -f a -x 12345 -N 1000 -p 12345  -k
+cp RAxML_bestTree.CC121_1000BS-GAMMA RAxML_bestTree.CC121_1000BS-GAMMA.nwk
+
+## CC4
+raxml -T 30 -A S16 -m GTRGAMMA -s 2016-06-08.listeria_cc4_snps.CC4-list.txt.fa -n CC4_5000BS-GAMMA -f a -x 12345 -N 5000 -p 12345  -k
+cp RAxML_bestTree.CC4_5000BS-GAMMA RAxML_bestTree.CC4_5000BS-GAMMA.nwk
+
+## CC8
+raxml -T 35 -A S16 -m GTRGAMMA -s 2016-06-08.listeria_cc8_snps.CC8-list.txt.fa -n CC8_2500BS-GAMMA -f a -x 12345 -N 2500 -p 12345  -k
+cp RAxML_bestTree.CC8_2500BS-GAMMA RAxML_bestTree.CC8_2500BS-GAMMA.nwk
+
+## CC9
+raxml -T 35 -A S16 -m GTRGAMMA -s 2016-06-08.listeria_cc9_snps.CC9-list.txt.fa -n CC9_2500BS-GAMMA -f a -x 12345 -N 2500 -p 12345  -k
+cp RAxML_bestTree.CC9_2500BS-GAMMA RAxML_bestTree.CC9_2500BS-GAMMA.nwk
+~~~~
+
 
 Chapter 5
 ========

@@ -152,3 +152,42 @@ The isolates for each reservoir type should be consecutive in the file. However,
 Results are output to an *.xml file which contains the name of the attributed reservoir (can be directly open with Excel or Libreoffice calc).
 
 The output file is stored in [data directory]/[data file]. In the MLST example, it is MLST_AbdnAttribution_Poultry.xls
+
+Chapter 8
+======
+In order to establish link between strains, one need pairwised distance between strain for each CC, and the following R script.
+It should be noted that it will produce 4 networks for 5, 10, 20, and 25 SNP threshold. Only 25 SNP threshold is used for linking strains together in chapter 8. 
+
+~~~~
+## library needed
+library(edgebundleR)
+
+## set file path
+setwd("PATH_TO_ADAPT")
+
+## Read SNP pairwise matrix
+a<-read.table("cc2_final.txt") # File name to de adapted
+colnames(a)=rownames(a)
+am<-as.matrix(a)
+
+## Generate networks
+g25<-edgebundle(1/(am+1),cutoff=(1/26),tension=0.5,fontsize = 14)
+g25
+saveEdgebundle(g25,file = "CC2_25SNP.html")
+
+g20<-edgebundle(1/(am+1),cutoff=(1/21),tension=0.5,fontsize = 14) # seuil à 15 SNPs serait plus pertinent
+g20
+saveEdgebundle(g20,file = "CC2_20SNP.html")
+
+g15<-edgebundle(1/(am+1),cutoff=(1/16),tension=0.5,fontsize = 14)
+g15
+saveEdgebundle(g15,file = "CC2_15SNP.html")
+
+g10<-edgebundle(1/(am+1),cutoff=(1/11),tension=0.5,fontsize = 14)
+g10
+saveEdgebundle(g10,file = "CC2_10SNP.html")
+
+g5<-edgebundle(1/(am+1),cutoff=(1/6),tension=0.5,fontsize = 14)
+g5
+saveEdgebundle(g5,file = "CC2_5SNP.html")
+~~~~

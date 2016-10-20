@@ -43,6 +43,7 @@ raxml -T 35 -A S16 -m GTRGAMMA -s 2016-06-08.listeria_cc9_snps.CC9-list.txt.fa -
 cp RAxML_bestTree.CC9_2500BS-GAMMA RAxML_bestTree.CC9_2500BS-GAMMA.nwk
 ~~~~
 
+The '.nwk' files were then prepared for 
 
 Chapter 7
 ========

@@ -13,6 +13,7 @@ You can find the latest version of the tool at https://github.com/lguillier/LISE
 
 Chapter 3
 ========
+Bio-informatic workflows can be accessed on PHE-bioinformatic: https://github.com/phe-bioinformatics 
 
 Chapter 4
 ========
@@ -20,7 +21,7 @@ The four trees generated in this chapter were generated with RAXML.
 A. Stamatakis: "RAxML Version 8: A tool for Phylogenetic Analysis and Post-Analysis of Large Phylogenies". In Bioinformatics, 2014
 
 The SNP multifasta files used are available there: https://github.com/lguillier/LISEQ-code/chapter4
-The following command lines were used to produce newick files
+The following command lines were used to produce newick files (T-threads used for inference and N-number of bootstrap should be adapted)
 ~~~~
 ## CC101
 raxml -T 7 -A S16 -m GTRGAMMA -s 2016-06-08.listeria_cc101_denovo_snps.CC101-list.txt.fa -n CC101_100BS-GAMMA -f a -x 12345 -N 100 -p 12345  -k
@@ -43,7 +44,7 @@ raxml -T 35 -A S16 -m GTRGAMMA -s 2016-06-08.listeria_cc9_snps.CC9-list.txt.fa -
 cp RAxML_bestTree.CC9_2500BS-GAMMA RAxML_bestTree.CC9_2500BS-GAMMA.nwk
 ~~~~
 
-The '.nwk' files were then prepared for 
+The '.nwk' files were then labbelled and colored according to r. file (all elements in chapter4 folder: https://github.com/lguillier/LISEQ-codes/tree/master/Chapter4) 
 
 Chapter 7
 ========

@@ -54,7 +54,7 @@ The Dutch model
 ------------
 An example of the Dutch model for 30 locus rMLST, 864 isolates and 10,000 runs, is given in
 “DutchModelrMLST_v5_SampleSizeCorrection_Attribution_Human.7z”
-which is available at https://github.com/......
+which is available at https://github.com/lguillier/LISEQ-codes/tree/master/Chapter7
 This needs to be extracted  using ZIP software. This will produce a .xlsm Excel file.
 The program runs under VBA Excel. The input data have to be placed in spreadsheet “Program”, starting with column “X” in the format given in the example.
 The attribution scores will be displayed in the columns J,K,L,… depending on the number of sources.
@@ -68,7 +68,7 @@ The prevalence sub-model,
 “Attribution_Listeria_Prevalence_Hald_EFSA.odc”
 has to run first and the results have to be fed into the main model,
 “Attribution_Listeria_RealModel_Hald_EFSA.odc”
-Both files are available at https://github.com/......
+Both files are available at https://github.com/lguillier/LISEQ-codes/tree/master/Chapter7
 
 STRUCTURE model
 ------------
@@ -82,7 +82,7 @@ http://www.danielwilson.me.uk/iSource.html
 
 The Aberdeen model
 ------------
-The model was implemented in Mathematica and it can be run in any Linux system with Mathematica installed. An example of the model and associated files (“AbdnAttribution_Mathematica.tgz”) are available at https://github.com/......
+The model was implemented in Mathematica and it can be run in any Linux system with Mathematica installed. An example of the model and associated files (“AbdnAttribution_Mathematica.tgz”) are available at https://github.com/lguillier/LISEQ-codes/tree/master/Chapter7
 In the following instructions on how to install the files and to run the model are given.
 
 *** Installation:
@@ -155,8 +155,8 @@ The output file is stored in [data directory]/[data file]. In the MLST example, 
 
 Chapter 8
 ======
-In order to establish link between strains, one need pairwised distance between strain for each CC, and the following R script.
-It should be noted that it will produce 4 networks for 5, 10, 20, and 25 SNP threshold. Only 25 SNP threshold is used for linking strains together in chapter 8. 
+In order to establish links between strains, one need pairwised distance between strain for each CC, and the above R script.
+It should be noted that it will produce 4 networks:  for 5, 10, 20, and 25 SNP thresholds respectively. Only 25 SNP threshold is used for linking strains together in chapter 8. 
 
 ~~~~
 ## library needed
@@ -191,3 +191,6 @@ g5<-edgebundle(1/(am+1),cutoff=(1/6),tension=0.5,fontsize = 14)
 g5
 saveEdgebundle(g5,file = "CC2_5SNP.html")
 ~~~~
+
+Chapter 9
+======

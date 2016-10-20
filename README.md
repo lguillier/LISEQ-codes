@@ -1,15 +1,15 @@
 LISEQ-codes
 ========
 
-You can find the latest version of the tool at https://github.com/lguillier/LISEQ-codes
-
 The 'LISEQ-codes' project corresponds to a repository of the differents codes used to produce the results presented in the EFSA external report “Closing gaps for performing a risk assessment on Listeria monocytogenes in ready-to-eat (RTE) foods: activity 3, the comparison of isolates from different compartments along the food chain, and from humans using whole genome sequencing (WGS) analysis”. 
 
-The main objective of the study was to compare L. monocytogenes isolates collected in the EU from ready-to-eat (RTE) foods, compartments along the food chain and from human cases by the use of whole genome sequencing (WGS). In order to trace and share the methodology used to produce results, source codes are provided.
+The project has involved four institues: Statens Serum Institut, Public Health England, Anses and University of Aberdeen.
+
+The main objective of the study was to compare *L. monocytogenes* isolates collected in the EU from ready-to-eat (RTE) foods, compartments along the food chain and from human cases by the use of whole genome sequencing (WGS). In order to trace and share the methodology used to produce results, source codes are provided.
 
 The global methodology is shared below, the input data files and source codes can be found in 'chapter x/' directories (the names of these directories corresponding to chapter number of external EFSA report). 
 
-
+You can find the latest version of the tool at https://github.com/lguillier/LISEQ-codes
 
 Chapter 3
 ========
@@ -20,7 +20,7 @@ The four trees generated in this chapter were generated with RAXML.
 A. Stamatakis: "RAxML Version 8: A tool for Phylogenetic Analysis and Post-Analysis of Large Phylogenies". In Bioinformatics, 2014
 
 The SNP multifasta files used are available there: https://github.com/lguillier/LISEQ-code/chapter4
-The following command lines were used to produce
+The following command lines were used to produce newick files
 ~~~~
 ## CC101
 raxml -T 7 -A S16 -m GTRGAMMA -s 2016-06-08.listeria_cc101_denovo_snps.CC101-list.txt.fa -n CC101_100BS-GAMMA -f a -x 12345 -N 100 -p 12345  -k
@@ -44,10 +44,7 @@ cp RAxML_bestTree.CC9_2500BS-GAMMA RAxML_bestTree.CC9_2500BS-GAMMA.nwk
 ~~~~
 
 
-Chapter 5
-========
-
-Chapter 6
+Chapter 7
 ========
 There were five attribution models that were used in the study. These are listed below together with links to the appropriate programs.
 

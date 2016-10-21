@@ -231,3 +231,5 @@ samtools view -bS -F 4 RL15000361.sam > RL15000361.bam
 samtools view RL15000361.bam | cut -f3 | sort | uniq
 
 ~~~~
+
+For IGV vizualization of mapping, the .fasta file and then .bam should be loaded.

@@ -201,3 +201,33 @@ The timelines produced are also in this folder (name gives indication of the CC 
 
 Chapter 9
 ======
+
+Marker presence/absence
+-----------------------
+In order to determine the presence/absenece of putative marker(s). The following script can be run in Linux Environement. Following programs and their dependencies need to be prior installed: bowtie2, samtools.
+
+Path name, name of fasta file that contains marker(s), names of the two paired-end read files should be adapted.
+The fasta file for markers for persitent is in https://github.com/lguillier/LISEQ-codes/tree/master/Chapter9
+~~~~
+# Path 
+cd /adapt_your_path
+
+# Unzip .gz paired-end files
+#gzip -d *.gz
+
+# Buiding Bowtie index for index
+bowtie2-build persistent.fasta persist
+
+# Mapped the reads on reference marker sequence
+bowtie2 -q -x persist -1 150880_RL1500036102-1.bacterial-fastq-only.1-0-0.processed.R1.fastq -2 150880_RL1500036102-1.bacterial-fastq-only.1-0-0.processed.R2.fastq -S RL15000361.sam
+
+# Samtools (creating bam)
+samtools view -bS RL15000361.sam > RL15000361.bam
+
+# Sorted bam
+samtools sort RL15000361.bam RL15000361.sorted
+samtools view -F 4 RL15000361.sam
+samtools view -bS -F 4 RL15000361.sam > RL15000361.bam
+samtools view RL15000361.bam | cut -f3 | sort | uniq
+
+~~~~

@@ -1,9 +1,9 @@
 LISEQ-codes
 ========
 
-The 'LISEQ-codes' project corresponds to a repository of the differents codes used to produce the results presented in the EFSA external report “Closing gaps for performing a risk assessment on Listeria monocytogenes in ready-to-eat (RTE) foods: activity 3, the comparison of isolates from different compartments along the food chain, and from humans using whole genome sequencing (WGS) analysis”. 
+The 'LISEQ-codes' project corresponds to a repository of the differents codes used to produce the results presented in the EFSA external report “Closing gaps for performing a risk assessment on Listeria monocytogenes in ready-to-eat (RTE) foods: activity 3, the comparison of isolates from different compartments along the food chain, and from humans using whole genome sequencing (WGS) analysis”. The report can be found in EFSA supporting publications: http://onlinelibrary.wiley.com/doi/10.2903/sp.efsa.2017.EN-1151/full. 
 
-The project has involved four institues: Statens Serum Institut, Public Health England, Anses and University of Aberdeen.
+The project has involved four institutes: Statens Serum Institut, Public Health England, Anses and University of Aberdeen.
 
 The main objective of the study was to compare *L. monocytogenes* isolates collected in the EU from ready-to-eat (RTE) foods, compartments along the food chain and from human cases by the use of whole genome sequencing (WGS). In order to trace and share the methodology used to produce results, source codes are provided.
 
